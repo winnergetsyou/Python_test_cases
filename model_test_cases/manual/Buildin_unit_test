@@ -1,0 +1,45 @@
+import math
+
+def Calculator_function(a,operator,b=0):
+    if operator=="add":
+        y = a+b
+        print(y)
+        return y
+    if operator=="substract":
+        y = a-b
+        print(y)
+        return y
+    if operator=="multiply":
+        y = a*b
+        print(y)
+        return y
+    if operator=="divide":
+        y = a/b
+        print(y)
+        return y
+    if operator=="squareRoot":
+        y = math.sqrt(a)
+        return y
+
+#Function overloading different from c++
+"""
+def Calculator_function(a,operator):
+    if operator=="squareRoot":
+        y = sqrt(a)
+        return y
+        """
+    
+# PYTHON MANUAL TESTING FOR CALCULATOR PROGRAM
+
+def test_function():
+    assert Calculator_function(4,"add",5)==9,"should be equal to 9"
+    assert Calculator_function(5,"substract",4)==1,"should be equal to 1"
+    assert Calculator_function(4,"substract",5)==-1,"should be equal to -1"
+    assert Calculator_function(4,"multiply",5)==20,"should be equal to 20"
+    assert Calculator_function(4,"divide",5)==0.8,"should be equal to 0.8"
+    assert Calculator_function(9,"squareRoot")==3,"should be equal to 3"
+if __name__=="__main__":
+    print(4-5)
+    test_function()
+
+
